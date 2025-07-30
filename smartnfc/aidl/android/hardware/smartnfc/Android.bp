@@ -1,0 +1,12 @@
+aidl_interface {
+    name: "android.hardware.smartnfc-ISmartLed",
+    srcs: ["ISmartLed.aidl"],
+    unstable: true,   // Bu sayede versions zorunlu olmaz
+    vendor_available: true,
+    host_supported: false,
+    backend: {
+        cpp: { enabled: true },
+        ndk: { enabled: true },
+        java: { enabled: true },
+    },
+}

@@ -1,0 +1,14 @@
+cc_binary {
+    name: "smartled_service",
+    srcs: [
+        "smartled_service.cpp",
+        "SmartLedService.cpp",
+    ],
+    shared_libs: [
+        "libbinder_ndk",
+        "libbase",
+        "android.hardware.smartnfc-ISmartLed-ndk_platform",  // <-- Bunu kullan!
+    ],
+    init_rc: ["smartled_service.rc"],
+    vendor: true,
+}

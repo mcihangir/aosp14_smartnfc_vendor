@@ -1,0 +1,2 @@
+/vendor/bin/smartled_service  u:object_r:smartled_service_exec:s0
+/sys/class/leds(/.*)?         u:object_r:sysfs_leds:s0

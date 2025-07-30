@@ -1,0 +1,8 @@
+service smartled_service /vendor/bin/smartled_service
+    class hal
+    user system
+    group system
+    disabled
+
+on property:sys.boot_completed=1
+    start smartled_service
