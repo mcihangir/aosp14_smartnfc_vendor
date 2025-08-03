@@ -2,7 +2,7 @@
 #include <android/binder_manager.h>
 #include <android/binder_process.h>
 
-using aidl::android::hardware::smartnfc::SmartLedService;
+using aidl::smartnfc::hardware::led::SmartLedService;
 
 int main() {
     ABinderProcess_setThreadPoolMaxThreadCount(0);

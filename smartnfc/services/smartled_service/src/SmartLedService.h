@@ -3,9 +3,9 @@
 
 #pragma once
 
-#include <aidl/android/hardware/smartnfc/BnSmartLed.h>
+#include <aidl/smartnfc/hardware/led/BnSmartLed.h>
 
-namespace aidl::android::hardware::smartnfc {
+namespace aidl::smartnfc::hardware::led {
 
 class SmartLedService : public BnSmartLed {
 public:

@@ -3,5 +3,13 @@ type smartled_service_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(smartled_service)
 
+# Sysfs LED permissions
 allow smartled_service sysfs_leds:dir search;
 allow smartled_service sysfs_leds:file rw_file_perms;
+
+# Binder permissions
+# binder_use(smartled_service)
+
+# Allow service to register its vendor HAL
+allow smartled_service smartled_service_api:service_manager add;
+allow smartled_service servicemanager:binder { call transfer };

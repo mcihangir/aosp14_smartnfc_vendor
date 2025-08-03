@@ -1,0 +1,21 @@
+aidl_interface {
+    name: "smartnfc.hardware.led",
+    vendor_available: true,
+    srcs: ["smartnfc/hardware/led/*.aidl"],
+    local_include_dir: ".",
+//    stability: "vintf",
+    unstable: true,
+//    versions: ["1"],
+    backend: {
+        java: {
+            enabled: true,
+            platform_apis: true,
+        },
+        cpp: {
+            enabled: true,
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+}

@@ -2,7 +2,7 @@
 #include <android-base/logging.h>
 #include <fstream>
 
-namespace aidl::android::hardware::smartnfc {
+namespace aidl::smartnfc::hardware::led {
 
 ndk::ScopedAStatus SmartLedService::setLedState(const std::string& ledName, int state) {
     std::string path = "/sys/class/leds/" + ledName + "/brightness";
